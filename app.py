@@ -1,10 +1,10 @@
 import streamlit as st
-from src.backend.calc import add
+from src.backend.calc import add, multiply
 
 st.set_page_config(page_title="Calculadora", page_icon="🧮", layout="centered")
 
 st.title("🧮 Calculadora simples")
-st.caption("Main: soma. Develop: multiplicação (será adicionada via PR).")
+st.caption("Main: soma. Develop: soma + multiplicação.")
 
 col1, col2 = st.columns(2)
 with col1:
@@ -12,6 +12,11 @@ with col1:
 with col2:
     b = st.number_input("B", value=0.0, step=1.0)
 
-if st.button("Somar"):
-    result = add(a, b)
-    st.success(f"Resultado: {result}")
+c1, c2 = st.columns(2)
+with c1:
+    if st.button("Somar"):
+        st.success(f"Resultado: {add(a, b)}")
+
+with c2:
+    if st.button("Multiplicar"):
+        st.success(f"Resultado: {multiply(a, b)}")
