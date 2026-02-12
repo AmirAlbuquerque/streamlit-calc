@@ -1,6 +1,6 @@
 # streamlit-calc
 
-App Streamlit simples com backend em Python. E CI
+App Streamlit simples com backend em Python. E CI test
 
 ## Rodar local
 ```bash
