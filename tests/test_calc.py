@@ -1,4 +1,4 @@
-from src.backend.calc import add, multiply
+from src.backend.calc import add, multiply, division
 
 def test_add_integers():
     assert add(2, 3) == 5.0
@@ -11,3 +11,6 @@ def test_multiply_integers():
 
 def test_multiply_floats():
     assert multiply(0.5, 0.2) == 0.1
+
+def test_division_floats():
+    assert division(4.0, 2.0) == 2.00000000000000004
